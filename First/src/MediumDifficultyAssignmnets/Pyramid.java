@@ -1,4 +1,5 @@
 package test;
+
 public class Pyramid {
     public static void main(String args[]) {
         patternMethod(4);
