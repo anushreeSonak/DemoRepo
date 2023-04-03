@@ -2,34 +2,30 @@ package tutorials;
 
 public class MultipleArray {
 
-	public static void main(String[] args) 
-	{
-		int a [][]= new int[2][2]; //{{0,9},{5,1,6},{2,2,7}};
-		a[0][0]=1;
-		a[0][1]=2;
-		a[1][0]=3;
-		a[1][1]=4;
-
-		for (int i=0;i<2;i++)
-		{
-			for (int j=0;j<2;j++)
-			{
-			System.out.print(a[i][j]);
-			}
-			System.out.println(" ");
+    public static void main(String[] args) {
+        public static void printArrays (String[]arrOne,int[] arrTwo)
+        {
+			System.out.println("Printing string array:");
 		}
+            for (String s : arrOne) {
+                System.out.println(s);
+            }
+            System.out.println("Printing integer array:");
+            for (int i : arrTwo) {
+                System.out.println(i);
+            }
+        }
 
-		int b[][]= {{10,20},{20,30},{20,30}};
-		System.out.println(b.length);
-		System.out.println(b[0].length);
-		for (int i=0;i<3;i++)
-		{
-			for (int j=0;j<2;j++)
-			{
-			System.out.print(b[i][j]);
-			}
-			System.out.println(" ");
+        public static void main (String[]args)
+        {
+            String[] strArr = {"apple", "banana", "orange"};
+            int[] intArr = {1, 2, 3, 4};
+            // Calling the new method and passing in the arrays
+            printArrays(strArr, intArr);
+        }
+    }
 
-	}
 
-	}}
+
+
+
