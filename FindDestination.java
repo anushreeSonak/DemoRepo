@@ -1,49 +1,41 @@
 package firstPackage;
 
 import java.util.*;
-public class Country 
-{
-	public static void main(String[] args) 
-	{
-		//Initialize ArrayList
-		List<List<String>> paths = new ArrayList<>();
-		
-		// add array values
-		paths.add(Arrays.asList("London", "New York"));
-		paths.add(Arrays.asList("New York", "Lima"));
-		paths.add(Arrays.asList("Lima", "Sao Paulo"));
-		
-		// Call FindDestination method
-		
-		String destination = findDestination(paths);
-		
-		//Print destination City
-		System.out.println(destination);
-	}
-
-	
-	public static String findDestination(List<List<String>> paths) 
-	{
-		//Declare set variable
-		Set<String> startCities = new HashSet<>();
-		Set<String> endCities = new HashSet<>();
-		
-		//Iterate array
-		for (List<String> path : paths) 
-		{
-			startCities.add(path.get(0));
-			endCities.add(path.get(1));
-		}
-		for(String endCity : endCities)
-		{
-			if (!startCities.contains(endCity))
-			{
-				return endCity;
-
-			}
-		}
-		
-		//if not matched city return Null
-		return null;
-	}
+public class FindDestination {
+    public static String destinationCity(List<List<String>> paths)   //nested list argument
+    {
+        List<String> outElemet1 = new ArrayList<>();
+        List<String> inElement1 = new ArrayList<>();
+        for (int i = 0; i < paths.size(); i++) {
+            List<String> Elements = paths.get(i);
+            String outElement = Elements.get(0);
+            String inElement = Elements.get(1);
+            outElemet1.add(outElement);
+            inElement1.add(inElement);
+        }
+        for (int i = 0; i < outElemet1.size(); i++) {
+            String inElement = inElement1.get(i); //local variable
+            if (!outElemet1.contains(inElement)) {
+                return inElement;
+            }
+        }
+        return null;
+    }
+    public static void main(String args[]) {
+        List<List<String>> testList = new ArrayList<>();
+        List<String> listString1 = new ArrayList<>();
+        listString1.add("London");
+        listString1.add("New York");
+        List<String> listString2 = new ArrayList<>();
+        listString2.add("New York");
+        listString2.add("Lima");
+        List<String> listString3 = new ArrayList<>();
+        listString3.add("Lima");
+        listString3.add("Sao Paulo");
+        testList.add(listString1);
+        testList.add(listString2);
+        testList.add(listString3);
+        String returnDestination = destinationCity(testList);
+        System.out.println(returnDestination);
+    }
 }
