@@ -1,15 +1,14 @@
-package firstPackage;
+package firstPackage.First.src.firstPackage;
 
-public class Example1 {
+public class Character {
 
-	public static boolean sameOccurrence(String s) {
+    public static boolean sameOccurrence(String s) {
         // Create an array to count the occurrences of each character
         int[] count = new int[26];
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             count[c - 'a']++;
         }
-
         // Check if all counts are the same
         int firstCount = -1;
         for (int i = 0; i < 26; i++) {
@@ -21,7 +20,6 @@ public class Example1 {
                 }
             }
         }
-
         return true;
     }
 
@@ -30,9 +28,4 @@ public class Example1 {
         boolean result = sameOccurrence(s);
         System.out.println(result);
     }
-
-
-
-	}
-
-
+}
