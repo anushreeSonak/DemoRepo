@@ -1,0 +1,7 @@
+/bin/
+.settings
+.idea
+.project
+.classpath
+DemoNew.iml
+*.class
