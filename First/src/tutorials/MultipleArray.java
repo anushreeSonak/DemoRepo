@@ -1,11 +1,8 @@
-package tutorials;
+package firstPackage.First.src.tutorials;
 
 public class MultipleArray {
-    public static void main(String[] args) {
-        public static void printArrays (String[]arrOne,int[] arrTwo)
-        {
-            System.out.println("Printing string Array:");
-        }
+    public static void printArrays(String[] arrOne, int[] arrTwo) {
+        System.out.println("Printing string Array:");
         for (String s : arrOne) {
             System.out.println(s);
         }
@@ -22,8 +19,3 @@ public class MultipleArray {
         printArrays(strArr, intArr);
     }
 }
-
-
-
-
-

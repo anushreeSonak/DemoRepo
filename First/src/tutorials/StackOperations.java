@@ -2,7 +2,7 @@ package tutorials;
 
 import java.util.Stack;
 
-public class StackDemo {
+public class  {
 
 	public static void main(String[] args)
 	{
