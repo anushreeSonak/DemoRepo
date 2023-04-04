@@ -13,7 +13,7 @@ public class MultipleArray {
     }
 
     public static void main(String[] args) {
-        String[] strArr = {"apple", "banana", "orange"};
+        String[] strArr = {"Apple", "Banana", "Orange"};
         int[] intArr = {1, 2, 3, 4};
         // Calling the new method and passing in the arrays
         printArrays(strArr, intArr);
