@@ -8,7 +8,7 @@ public class StackOperations {
         //Pushing elements to the stack
         stack.push("India");
         stack.push("Canada");
-        stack.push("New York");
+        stack.push("New york");
         stack.push("China");
         System.out.println("Stack: " + stack);
         //to remove/pop the element form the stack
