@@ -30,6 +30,6 @@ public class EqualOccurances {
         if (output == true)
             System.out.println("All Characters Have Equal Number of Occurrences");
         else
-            System.out.println("All Characters Have not Equal Number of Occurrences");
+            System.out.println("All Characters Have Not Equal Number of Occurrences");
     }
 }
