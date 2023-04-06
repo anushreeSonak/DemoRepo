@@ -28,8 +28,8 @@ public class EqualOccurances {
     public static void main(String[] args) {
         boolean output = equalNumberOccurances("abacbc");
         if (output == true)
-            System.out.println("All Characters Have equal Number of Occurrences");
+            System.out.println("All Characters Have Equal Number of Occurrences");
         else
-            System.out.println("All Characters Have not equal Number of Occurrences");
+            System.out.println("All Characters Have not Equal Number of Occurrences");
     }
 }
