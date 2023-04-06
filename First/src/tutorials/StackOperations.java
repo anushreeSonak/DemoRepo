@@ -1,15 +1,12 @@
-package tutorials;
+package firstPackage.First.src.tutorials;
 
 import java.util.Stack;
 
-public class StackDemo {
+public class StackOperations {
 
 	public static void main(String[] args)
 	{
 		Stack<String> stack = new Stack<>();
-		
-		//Pushing elements to the stack
-		
 		stack.push("India");
 		stack.push("Canada");
 		stack.push("New York");
