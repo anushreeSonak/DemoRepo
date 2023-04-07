@@ -3,24 +3,38 @@ package firstPackage.First.src.MediumDifficultyAssignmnets;
 import java.util.Arrays;
 
 public class Swapper {
-    public static void main(String[] args) {
-        Swapper swapObject = new Swapper();
-        int[] inputArray = {1, 2, 3, 7};
-        int[] inputArraySecond = {1, 2, 3};
-        int[] inputArrayThird = {1, 6, 7, 9, 8, 12};
-        swapObject.swapPrimeNumber(inputArray);
-        swapObject.swapPrimeNumber(inputArraySecond);
-        swapObject.swapPrimeNumber(inputArrayThird);
+    private int temp;
+    private int lastElement;
+
+    public void endSwap(int arrayOne[]) {
+        lastElement = arrayOne[arrayOne.length - 1];
+        int i, Num = 0, flag = 0;
+        Num = lastElement / 2;
+        if (lastElement == 0 || lastElement == 1) {
+            System.out.println(lastElement + " is not Prime Number" +
+                    "  The array is :" + Arrays.toString(arrayOne));
+        } else {
+            for (i = 2; i <= Num; i++) {
+                if (lastElement % i == 0) {
+                    System.out.println(lastElement + " is not a Prime Number" +
+                            "The array is :" + Arrays.toString(arrayOne));
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(lastElement + " is a Prime Number");
+                temp = arrayOne[0];
+                arrayOne[0] = lastElement;
+                arrayOne[arrayOne.length - 1] = temp;
+                System.out.println("Updated New array is : " + Arrays.toString(arrayOne));
+            }
+        }
     }
 
-    public void swapPrimeNumber(int[] inputArray) {
-        int lastElement = inputArray[inputArray.length - 1];
-        if (lastElement % 2 != 0) {
-            int temporary = 0;
-            temporary = inputArray[0];
-            inputArray[0] = inputArray[inputArray.length - 1];
-            inputArray[inputArray.length - 1] = temporary;
-        }
-        System.out.println(Arrays.toString(inputArray));
+    public static void main(String[] args) {
+        Swapper swapArray = new Swapper();
+        int[] arrayOne = new int[]{1, 2, 3, 7};
+        swapArray.endSwap(arrayOne);
     }
 }
