@@ -7,19 +7,15 @@ public class Swapper {
     private int lastNumber;
 
     public void endSwap(int arrayOne[]) {
-        // find the last value of array
-        int flag = 0;
-        lastNumber = arrayOne[arrayOne.length - 1];
-        if (lastNumber % 2 == 0) {
-            flag = flag + 1;
-            System.out.println("This is not a prime number");
-        } else {
-            System.out.println("Array last element is : " + lastNumber + "   And the Number is prime Number");
-            temp = arrayOne[0];
-            arrayOne[0] = lastNumber;
-            arrayOne[arrayOne.length - 1] = temp;
-            System.out.println("New Array is : " + Arrays.toString(arrayOne));
+
+        int lastElement = arrayOne[arrayOne.length - 1];
+        if (lastElement % 2 != 0) {
+            int temporary = 0;
+            temporary = arrayOne[0];
+            arrayOne[0] = arrayOne[arrayOne.length - 1];
+            arrayOne[arrayOne.length - 1] = temporary;
         }
+        System.out.println(Arrays.toString(arrayOne));
     }
 
     public static void main(String[] args) {
