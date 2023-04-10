@@ -3,7 +3,7 @@ package firstPackage.First.src.MediumDifficultyAssignmnets;
 public class AnnualSalary {
     public static void main(String[] args) {
         AnnualSalary SalaryObject = new AnnualSalary();
-        SalaryObject.taxSalaryCount(500000);
+        SalaryObject.taxSalaryCount(600000);
     }
 
     public void taxSalaryCount(int salary) {
