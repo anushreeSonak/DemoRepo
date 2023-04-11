@@ -8,11 +8,11 @@ public class AlternateChar {
 
     public static String mergeStringAlternatively(String firstString, String secondString) {
         String mergeString = "";
-        for (int VarOne = 0; VarOne < firstString.length() || VarOne < secondString.length(); VarOne++) {
-            if (VarOne < firstString.length())
-                mergeString += firstString.charAt(VarOne);
-            if (VarOne < secondString.length())
-                mergeString += secondString.charAt(VarOne);
+        for (int varOne = 0; varOne < firstString.length() || varOne < secondString.length(); varOne++) {
+            if (varOne < firstString.length())
+                mergeString += firstString.charAt(varOne);
+            if (varOne < secondString.length())
+                mergeString += secondString.charAt(varOne);
         }
         return mergeString;
     }
