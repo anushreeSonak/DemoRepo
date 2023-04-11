@@ -6,15 +6,15 @@ public class Pyramid {
     }
 
     public static void patternMethod(int row) {
-        for (int VarOne = 1; VarOne <= row; VarOne++) {
-            for (int VarTwo = 1; VarTwo <= row - VarOne; VarTwo++) {
+        for (int varOne = 1; varOne <= row; varOne++) {
+            for (int varTwo = 1; varTwo <= row - varOne; varTwo++) {
                 System.out.print(" ");
             }
-            for (int VarThree = VarOne; VarThree >= 1; VarThree--) {
-                System.out.print(VarThree);
+            for (int varThree = varOne; varThree >= 1; varThree--) {
+                System.out.print(varThree);
             }
-            for (int VarFour = 2; VarFour <= VarOne; VarFour++) {
-                System.out.print(VarFour);
+            for (int varFour = 2; varFour <= varOne; varFour++) {
+                System.out.print(varFour);
             }
             System.out.println();
         }
