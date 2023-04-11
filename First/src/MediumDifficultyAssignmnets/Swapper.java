@@ -34,3 +34,8 @@ public class Swapper {
         swap.endSwap(arrayOne);
     }
 }
+//OUTPUT:-
+// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=57463:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\anushrees\Desktop\Demo\DemoRepo\out\production\DemoRepo firstPackage.First.src.MediumDifficultyAssignmnets.Swapper
+//Array last element is : 5 And Number is prime
+//new array is : [5, 2, 3, 4, 1]
+//Process finished with exit code 0
