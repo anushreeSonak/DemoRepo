@@ -1,35 +1,32 @@
-package tutorials;
+package firstPackage.First.src.tutorials;
 
 public class MultipleArray {
+    public static void printArrays(String[] arrOne, int[] arrTwo) {
+        System.out.println("Printing string array:");
+        for (String varOne : arrOne) {
+            System.out.println(varOne);
+        }
+        System.out.println("Printing integer array:");
+        for (int index : arrTwo) {
+            System.out.println(index);
+        }
+    }
 
-	public static void main(String[] args) 
-	{
-		int a [][]= new int[2][2]; //{{0,9},{5,1,6},{2,2,7}};
-		a[0][0]=1;
-		a[0][1]=2;
-		a[1][0]=3;
-		a[1][1]=4;
-
-		for (int i=0;i<2;i++)
-		{
-			for (int j=0;j<2;j++)
-			{
-			System.out.print(a[i][j]);
-			}
-			System.out.println(" ");
-		}
-
-		int b[][]= {{10,20},{20,30},{20,30}};
-		System.out.println(b.length);
-		System.out.println(b[0].length);
-		for (int i=0;i<3;i++)
-		{
-			for (int j=0;j<2;j++)
-			{
-			System.out.print(b[i][j]);
-			}
-			System.out.println(" ");
-
-	}
-
-	}}
+    public static void main(String[] args) {
+        String[] strArr = {"apple", "banana", "orange"};
+        int[] intArr = {1, 2, 3, 4};
+        printArrays(strArr, intArr);
+    }
+}
+//OUTPUT:-
+// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=60875:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\anushrees\Desktop\Demo\DemoRepo\out\production\DemoRepo firstPackage.First.src.tutorials.MultipleArray
+//Printing string array:
+//apple
+//banana
+//orange
+//Printing integer array:
+//1
+//2
+//3
+//4
+//Process finished with exit code 0
