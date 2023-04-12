@@ -1,17 +1,11 @@
-package tutorials;
+package firstPackage.First.src.tutorials;
 
 public class Recursion {
-
-	int CalculateFactorial(int n) 
-	{
-		if(n==1)
-		{
-		return 1;
-		}
-		else
-		{
-			return(n*CalculateFactorial(n-1));
-		}
-	}
-
+    int calculateFactorial(int number) {
+        if (number == 1) {
+            return 1;
+        } else {
+            return (number * calculateFactorial(number - 1));
+        }
+    }
 }
