@@ -3,39 +3,37 @@ package firstPackage.First.src.MediumDifficultyAssignmnets;
 import java.util.Arrays;
 
 public class Swapper {
-    private int temp;
-    private int lastNumber;
-    boolean flag = false;
+    public static int count = 0, index = 1;
 
-    public void endSwap(int inputArray[]) {
-        lastNumber = inputArray[inputArray.length - 1];
-        int mid = lastNumber / 2;
-        for (int counter = 2; counter <= mid; counter++) {
-            if (lastNumber % counter == 0) {
-                flag = true;
-                break;
+    public int primeOrNot(int lastNum) {
+        if (index <= lastNum) {
+            if (lastNum % index == 0) {
+                count++;
             }
+            index++;
+            primeOrNot(lastNum);
         }
-        if (flag == true || lastNumber == 0 || lastNumber == 1) {
-            System.out.println("Last number of array is : " + lastNumber + " is not prime so not swaped");
-            System.out.println("new array is : " + Arrays.toString(inputArray));
-        } else {
-            System.out.println("Array last element is : " + lastNumber + " And Number is prime");
-            temp = inputArray[0];
-            inputArray[0] = lastNumber;
-            inputArray[inputArray.length - 1] = temp;
-            System.out.println("new array is : " + Arrays.toString(inputArray));
-        }
+        return count;
     }
 
-    public static void main(String[] args) {
-        int[] arrayOne = new int[]{1, 2, 3, 4, 5};
-        Swapper swap = new Swapper();
-        swap.endSwap(arrayOne);
+    public static void main(String arg[]) {
+        Swapper prime = new Swapper();
+        int[] inputArray = new int[]{1, 2, 3, 7};
+        int lastNum = inputArray[inputArray.length - 1];
+        int result = prime.primeOrNot(lastNum);
+        if (result == 2) {
+            System.out.println(lastNum + " : is prime number ");
+            int temp = 0;
+            temp = inputArray[0];
+            inputArray[0] = inputArray[inputArray.length - 1];
+            inputArray[inputArray.length - 1] = temp;
+            System.out.println("The swap array is: " + Arrays.toString(inputArray));
+        } else
+            System.out.println("is NOT a prime number ");
     }
 }
-//OUTPUT:-
-// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=57463:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\anushrees\Desktop\Demo\DemoRepo\out\production\DemoRepo firstPackage.First.src.MediumDifficultyAssignmnets.Swapper
-//Array last element is : 5 And Number is prime
-//new array is : [5, 2, 3, 4, 1]
+//OUTPUT:
+// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\lib\idea_rt.jar=53710:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\anushrees\Desktop\Demo\DemoRepo\out\production\DemoRepo firstPackage.First.src.MediumDifficultyAssignmnets.Swapper
+//7 : is prime number
+//The swap array is: [7, 2, 3, 1]
 //Process finished with exit code 0
