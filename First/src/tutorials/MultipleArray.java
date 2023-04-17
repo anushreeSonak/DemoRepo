@@ -1,21 +1,21 @@
 package firstPackage.First.src.tutorials;
 
 public class MultipleArray {
-    public static void printArrays(String[] arrOne, int[] arrTwo) {
+    public static void printArrays(String[] stringArray, int[] fruitArray) {
         System.out.println("Printing string array:");
-        for (String varOne : arrOne) {
-            System.out.println(varOne);
+        for (String var : stringArray) {
+            System.out.println(var);
         }
         System.out.println("Printing integer array:");
-        for (int index : arrTwo) {
+        for (int index : fruitArray) {
             System.out.println(index);
         }
     }
 
     public static void main(String[] args) {
-        String[] strArr = {"apple", "banana", "orange"};
-        int[] intArr = {1, 2, 3, 4};
-        printArrays(strArr, intArr);
+        String[] stringSetArray = {"apple", "banana", "orange"};
+        int[] numericArray = {1, 2, 3, 4};
+        printArrays(stringSetArray, numericArray);
     }
 }
 //OUTPUT:-
