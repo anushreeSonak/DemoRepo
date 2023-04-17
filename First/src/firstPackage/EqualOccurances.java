@@ -8,13 +8,13 @@ import java.util.Set;
 public class EqualOccurances {
     public static boolean numberOfOccurences(String input) {
         Map<Character, Integer> countOccurances = new HashMap<>();
-        char[] charOne = input.toCharArray();
-        for (char ch : charOne) {
+        char[] characterString = input.toCharArray();
+        for (char ch : characterString) {
             countOccurances.put(ch, countOccurances.containsKey(ch) ? countOccurances.get(ch) + 1 : 1);
         }
-        Set<Integer> setOne = new HashSet<>();
-        setOne.addAll(countOccurances.values());
-        return setOne.size() == 1 ? true : false;
+        Set<Integer> setChar = new HashSet<>();
+        setChar.addAll(countOccurances.values());
+        return setChar.size() == 1 ? true : false;
     }
 
     public static void main(String[] args) {
