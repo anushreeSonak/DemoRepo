@@ -1,9 +1,9 @@
 package firstPackage.First.dailyExercises;
 
 public class PrintEvenLength {
-    public static void printWords(String var) {
+    public static void printWords(String text) {
         // Splits String
-        for (String word : var.split(" "))
+        for (String word : text.split(" "))
             // if length is even
             if (word.length() % 2 == 0)
                 // Print the word
