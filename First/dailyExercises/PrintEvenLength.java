@@ -11,8 +11,8 @@ public class PrintEvenLength {
     }
 
     public static void main(String[] args) {
-        String s = "I am Anushree sonak and I am from kothrud pune";
-        printWords(s);
+        String Length = "I am Anushree sonak and I am from kothrud pune";
+        printWords(Length);
     }
 }
 //OUTPUT:
