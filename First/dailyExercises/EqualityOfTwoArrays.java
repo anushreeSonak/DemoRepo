@@ -1,31 +1,21 @@
 package firstPackage.First.dailyExercises;
 
+import java.util.Arrays;
+
 public class EqualityOfTwoArrays {
     public static void main(String[] args) {
-        int[] arrayIndex = {2, 5, 1, 7, 4};
-        int[] arraySubIndex = {2, 5, 1, 7, 4};
-        boolean equalOrNot = true;
-        if (arrayIndex.length == arraySubIndex.length) {
-            for (int index = 0; index < arrayIndex.length; index++) {
-                if (arrayIndex[index] == arraySubIndex[index]) {
-                    equalOrNot = true;
-                } else {
-                    equalOrNot = false;
-                    break;
-                }
-            }
+        int[] arrayIndex = {1, 2, 3, 4, 5};
+        int[] arraySubIndex = {1, 2, 3, 4, 5};
+        boolean isEqual = Arrays.equals(arrayIndex, arraySubIndex);
+        if (isEqual) {
+            System.out.println("Arrays are Equal.");
         } else {
-            equalOrNot = false;
-        }
-        if (equalOrNot) {
-            System.out.println("Two Arrays Are EQUAL");
-        } else {
-            System.out.println("Two Arrays Are Not equal");
+            System.out.println("Arrays are Not Equal.");
         }
     }
 }
 //OUTPUT:
-// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52975:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\anushrees\Desktop\New folder\DemoRepo\First\out\production\First1" firstPackage.First.dailyExercises.EqualityOfTwoArrays
-//Two Arrays Are EQUAL
+// "C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=64192:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\anushrees\Desktop\New folder\DemoRepo\First\out\production\First1" firstPackage.First.dailyExercises.EqualityOfTwoArrays
+//Arrays are Equal.
 //
 //Process finished with exit code 0
