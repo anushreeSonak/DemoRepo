@@ -10,7 +10,6 @@ public class MatrixAddition {
                 result[index][subIndex] = matrix[index][subIndex] + subMatrix[index][subIndex];
                 System.out.print(result[index][subIndex] + " ");
             }
-            //new line
             System.out.println();
         }
     }
