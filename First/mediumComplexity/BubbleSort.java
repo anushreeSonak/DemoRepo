@@ -1,6 +1,7 @@
-package firstPackage.First.dailyExercises;
+package firstPackage.First.mediumComplexity;
 
 public class BubbleSort {
+
     public static void bubbleSort(int[] array) {
         int data = array.length;
         for (int index = 0; index < data - 1; index++) {
