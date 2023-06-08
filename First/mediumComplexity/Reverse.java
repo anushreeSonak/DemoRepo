@@ -1,2 +1,2 @@
-package firstPackage.First.dailyExercises;public class Reverse {
+package firstPackage.First.mediumComplexity;public class Reverse {
 }
