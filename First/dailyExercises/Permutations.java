@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Permutations {
+
     public static List<String> findPermutations(String input) {
         List<String> permutations = new ArrayList<>();
         permute("", input, permutations);
@@ -14,9 +15,9 @@ public class Permutations {
         if (suffix.length() == 0) {
             permutations.add(prefix);
         } else {
-            for (int i = 0; i < suffix.length(); i++) {
-                String newPrefix = prefix + suffix.charAt(i);
-                String newSuffix = suffix.substring(0, i) + suffix.substring(i + 1);
+            for (int index = 0; index < suffix.length(); index++) {
+                String newPrefix = prefix + suffix.charAt(index);
+                String newSuffix = suffix.substring(0, index) + suffix.substring(index + 1);
                 permute(newPrefix, newSuffix, permutations);
             }
         }
