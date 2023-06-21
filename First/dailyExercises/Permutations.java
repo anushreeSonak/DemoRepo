@@ -5,29 +5,29 @@ import java.util.List;
 
 public class Permutations {
 
-    public static List<String> findPermutations(String input) {
-        List<String> permutations = new ArrayList<>();
-        permute("", input, permutations);
-        return permutations;
+    public static List<String> findPermutations(String data) {
+        List<String> mockData = new ArrayList<>();
+        permute("", data, mockData);
+        return mockData;
     }
 
-    private static void permute(String prefix, String suffix, List<String> permutations) {
+    private static void permute(String prefix, String suffix, List<String> mockData) {
         if (suffix.length() == 0) {
-            permutations.add(prefix);
+            mockData.add(prefix);
         } else {
             for (int index = 0; index < suffix.length(); index++) {
-                String newPrefix = prefix + suffix.charAt(index);
-                String newSuffix = suffix.substring(0, index) + suffix.substring(index + 1);
-                permute(newPrefix, newSuffix, permutations);
+                String prefixData = prefix + suffix.charAt(index);
+                String suffixData = suffix.substring(0, index) + suffix.substring(index + 1);
+                permute(prefixData, suffixData, mockData);
             }
         }
     }
 
     public static void main(String[] args) {
-        String input = "anu";
-        List<String> permutations = findPermutations(input);
-        System.out.println("Permutations of " + input + ":");
-        for (String permutation : permutations) {
+        String data = "anu";
+        List<String> mockData = findPermutations(data);
+        System.out.println("Permutations of " + data + ":");
+        for (String permutation : mockData) {
             System.out.println(permutation);
         }
     }
