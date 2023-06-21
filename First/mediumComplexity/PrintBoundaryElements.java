@@ -1,6 +1,7 @@
 package firstPackage.First.mediumComplexity;
 
 public class PrintBoundaryElements {
+    
     public void boundaryElement(int data[][]) {
         // Printing Input Matrix;
         System.out.println("Input Matrix is : ");
