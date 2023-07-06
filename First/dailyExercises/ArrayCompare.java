@@ -3,6 +3,7 @@ package firstPackage.First.dailyExercises;
 import java.util.Arrays;
 
 public class ArrayCompare {
+
     public static <T> boolean compareArrays(T[] array, T[] subArray) {
         if (array.length != subArray.length) {
             return false;
@@ -17,36 +18,12 @@ public class ArrayCompare {
     }
 
     public static void main(String[] args) {
-        Integer[] arrayFirst = {
-                1,
-                2,
-                3,
-                4
-        };
-        Integer[] arrSecond = {
-                1,
-                2,
-                4,
-                4
-        };
-        Integer[] arrThird = {
-                1,
-                2,
-                3,
-                4
-        };
-        String[] arrFourth = {
-                "Java",
-                "World"
-        };
-        String[] arrFifth = {
-                "JavaScript",
-                "World"
-        };
-        String[] arrSixth = {
-                "Java",
-                "World"
-        };
+        Integer[] arrayFirst = {1, 2, 3, 4};
+        Integer[] arrSecond = {1, 2, 4, 4};
+        Integer[] arrThird = {1, 2, 4, 4}; 
+        String[] arrFourth = {"Java", "World"};
+        String[] arrFifth = {"JavaScript", "World"};
+        String[] arrSixth = {"Java", "World"};
         System.out.println("Original arrays:");
         System.out.println("First Array: " + Arrays.toString(arrayFirst));
         System.out.println("Second Array: " + Arrays.toString(arrSecond));
